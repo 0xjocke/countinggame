@@ -1,0 +1,56 @@
+@import "susy";
+@import "fonts";
+@import "mixins"; 
+   
+   $total-columns: 12;
+   $column-width: 4em;
+   $gutter-width: 1em;
+   $grid-padding: $gutter-width;
+   $border-box-sizing: true;
+
+.container{
+	@include container;
+}
+
+/*
+Playmode
+*/
+.col3{
+	@include span-columns(3, 12);
+}
+.col3o{
+	@include span-columns(3 omega, 12);
+}
+
+.col6{
+	@include span-columns(6, 12);
+}
+
+.answer{
+	margin-top: 4rem;
+	@include span-columns(3, 12); 
+}
+.answer:last-child{
+	@include span-columns(3 omega, 12); 
+}
+
+/*
+Finnished
+*/
+
+.playagain{
+	margin-top:3rem;
+	@include span-columns(4, 12); 
+	@include squish(2,0,12);
+	&:active{
+		margin-top: 3.2rem;
+	}
+}
+.newgame{
+	margin-top:3rem;
+	@include span-columns(4 omega, 12); 
+	@include squish(0,2,12);
+	&:active{
+		margin-top: 3.2rem;
+	}
+}

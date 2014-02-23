@@ -1,0 +1,22 @@
+@mixin arrow($direction, $size, $color: black){
+	content:"";
+	position: absolute;
+	border: $size solid;
+	border-color:rgba(0, 0 ,0, 0);    
+	@if $direction == up{
+		border-bottom-color: $color;
+	}@else if $direction == down{
+		border-top-color: $color;
+	}@else if $direction == left{
+		border-right-color: $color;
+	}@else if $direction == right{
+		border-left-color: $color;
+	}
+}
+
+@mixin icon($type) {
+	background-image: $type;
+	background-size: 1.875rem 1.875rem;
+	background-position: 0.68rem 0.5rem;
+	background-repeat: no-repeat;
+}
