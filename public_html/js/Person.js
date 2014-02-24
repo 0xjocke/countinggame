@@ -8,12 +8,15 @@ function Person(values){
 
 Person.prototype.signup = function(){
 	$.ajax({
-		url: '/play.php',
+		url: 'backend.php',
 		type: 'POST',
 		data: {'name':this.name, 'email': this.email }
 	})
-	.done(function(html) {
-		$('.login').replaceWith(html);
+	.done(function() {
+		$( "#dataloaded" ).trigger( "click" );
+		$('.login').fadeOut('fast', function() {
+			$('.play').fadeIn('fast');
+		});
 	})
 	.fail(function() {
 		console.log("error");
@@ -21,6 +24,6 @@ Person.prototype.signup = function(){
 	.always(function() {
 		console.log("complete");
 	});
-}
+};
 
 

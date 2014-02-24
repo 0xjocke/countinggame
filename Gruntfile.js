@@ -38,8 +38,10 @@ module.exports = function(grunt) {
         },
         concat: {
             all: {
-                src: ['public_html/js/libs/jquery.js',
-                    'public_html/js/Person.js','public_html/js/Game.js', 'public_html/js/eventchecker.js' ],
+                src: ['public_html/js/numbers.js',
+                    'public_html/js/Person.js',
+                    'public_html/js/Game.js',
+                    'public_html/js/eventchecker.js' ],
                 dest: 'public_html/js/build/script.js'    //output
             }
         },

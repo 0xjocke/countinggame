@@ -8,14 +8,13 @@
 		<img class="logo" src="img/logo.png">
 		<h1>Räknespelet</h1>
 	</header>
-	<section class="login">
-		<div class="container">
-			<form id="signup" action="">
-				<input class="contactfield contactfield-name" type="text" name="name" placeholder="Namn" required>
-				<input class="contactfield contactfield-email" type="email" name="email" placeholder="Email" required>
-				<input class=" btn btn-default" type="submit" value="Spela">
-			</form>
-		</div>
-	</section>
+	<?php require_once 'login.php'; ?>
+	<?php require_once 'play.php'; ?>
+	<?php require_once 'finished.php'; ?>
+	<?php require_once 'toplist.php'; ?>
+
+	<button class="hidden" id="finished"></button>
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/build/script.js"></script>
 </body>
 </html>
