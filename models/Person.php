@@ -22,6 +22,7 @@
   	}
   	public function save_to_session() {
         $_SESSION['id'] = $this->id;
+        $_SESSION['name'] = $this->name;
 	}
  	public static function find($id) {
 	    $class = get_called_class();
@@ -33,6 +34,13 @@
 	    // returnes one row with objects
 	    return $statement->fetch(PDO::FETCH_CLASS);
   	}
+  	public static function get_toplist() {
+	    $class = get_called_class();
+	    $statement = self::$dbh->prepare("SELECT * FROM persons ORDER BY highscore DESC LIMIT 10");
+	    $statement->execute();
+	    // returnes 10 row with objects
+    	return $statement->fetchAll(PDO::FETCH_CLASS, $class);
+  	}
   	public static function save_highscore($id, $highscore) {
 		    $statement = self::$dbh->prepare(
 		      "UPDATE ".self::TABLE_NAME." SET highscore=:highscore
@@ -41,7 +49,6 @@
 		                              'highscore' => $highscore
 		                             ));
   	}
-
 
   	public function save_to_db(){
   		 $statement = self::$dbh->prepare(

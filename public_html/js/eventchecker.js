@@ -4,19 +4,20 @@ $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
 	var values = $(this).serializeArray();
 	var person = new Person(values);
+	game = new Game();
 	person.signup(); //singup will trigger #dataloaded
 });
 
 //create new game.
 $(document).on('click', '#dataloaded', function(event) {
 	event.preventDefault();
-	var game = new Game();
-	var answered = false;
-	game.removeClasses();
+	game.resetOld();
+	answered = false;
 	game.points();
 	game.timer();
 	game.addNumber();
-	$(document).on('click', '.answer', function(event) {
+});
+$(document).hammer().on('tap', '.answer', function(event) {
 		event.preventDefault();
 		if (answered) return;
 		var clickedBtn = $(this);
@@ -28,21 +29,42 @@ $(document).on('click', '#dataloaded', function(event) {
 			answered = false;
 			clearInterval(timer);
 			}, 1000);
-	});
-	$(document).on('click', '#finished', function(event) {
-		event.preventDefault();
-		game.finished();
-	});
-	$(document).on('click', '#pointsloaded', function(event) {
-		event.preventDefault();
-		$('#finishedPoints').html(game.pointsCounter);
-	});
+});
+$(document).on('click', '#finished', function(event) {
+	event.preventDefault();
+	game.finished();
+});
+$(document).on('click', '#pointsloaded', function(event) {
+	event.preventDefault();
+	$('#finishedPoints').html(game.pointsCounter);
 });
 
 
-$(document).on('click', '#playagain', function(event) {
+$(document).hammer().on('tap', '#playagain', function(event) {
+	event.preventDefault();
 	$('.finished').fadeOut('fast', function() {
 		$('.play').fadeIn('fast');
 		$('#dataloaded').trigger('click');
+	});
+});
+
+$(document).hammer().on('tap', '#toplist', function(event) {
+	event.preventDefault();
+	$.ajax({
+		url: 'backend.php?toplist=yes'
+	})
+	.done(function(html) {
+		$('#empty').replaceWith(html);
+		$('.finished').fadeOut('fast', function() {
+			$('.toplist').fadeIn('fast');
+		});
+	});
+});
+$(document).hammer().on('swipeleft', '.toplist', function(event) {
+	$('#toplistBack').trigger('tap');
+});
+$(document).hammer().on('tap', '#toplistBack', function(event) {
+	$('.toplist').fadeOut('fast', function() {
+		$('.finished').fadeIn('fast');
 	});
 });

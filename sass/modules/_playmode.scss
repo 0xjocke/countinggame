@@ -1,3 +1,4 @@
+@import "compass";
 .play{
 	display:none;
 }
@@ -20,8 +21,11 @@
 	}
 }
 
+
 .correct-picked{
-	color: green;
+	color: white;
+	background: lighten(green, 15%);
+	text-shadow: 2px 2px 2px lighten(black, 10%);
 }
 .correct-notpicked{
 	background: grey;
@@ -36,4 +40,31 @@
 	background: grey;
 	color: grey;
 	text-shadow:none;
+}
+
+.bonus{
+	display:none;
+	width: 150px;
+	position: absolute;
+	top: 9rem;
+	right:10rem;
+	animation:cloud 3s;
+	-webkit-animation:cloud 3s; /* Safari and Chrome */
+	}
+
+@keyframes cloud
+{
+0%   {}
+25%  {width: 250px;}
+50%  {width: 150px}
+75%  {width: 250px;}
+100% {width:150px;}
+}
+@-webkit-keyframes cloud
+{
+0%   {}
+25%  {width: 250px;}
+50%  {width: 150px}
+75%  {width: 250px;}
+100% {width:150px;}
 }

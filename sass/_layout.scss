@@ -41,7 +41,13 @@ Finnished
 .playagain{
 	margin-top:3rem;
 	@include span-columns(4, 12); 
-	@include squish(2,0,12);
+	&:active{
+		margin-top: 3.2rem;
+	}
+}
+.toplistbtn{
+	margin-top:3rem;
+	@include span-columns(4, 12);
 	&:active{
 		margin-top: 3.2rem;
 	}
@@ -49,8 +55,13 @@ Finnished
 .newgame{
 	margin-top:3rem;
 	@include span-columns(4 omega, 12); 
-	@include squish(0,2,12);
 	&:active{
 		margin-top: 3.2rem;
 	}
+}
+/*
+Finnished
+*/
+#toplistBack{
+	@include pre(1,12);
 }

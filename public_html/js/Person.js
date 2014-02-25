@@ -13,9 +13,9 @@ Person.prototype.signup = function(){
 		data: {'name':this.name, 'email': this.email }
 	})
 	.done(function() {
-		$( "#dataloaded" ).trigger( "click" );
 		$('.login').fadeOut('fast', function() {
 			$('.play').fadeIn('fast');
+			$( "#dataloaded" ).trigger( "click" );
 		});
 	})
 	.fail(function() {

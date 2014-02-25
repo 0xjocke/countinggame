@@ -40,35 +40,43 @@ var math = [
 		'answer': '36'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '3 * 1 + 12 - 2',
+		'answer': '13'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '27 * 3',
+		'answer': '81'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '44 - 17 + 30',
+		'answer': '57'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '22 + 25 * 2',
+		'answer': '72'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '100 - 10 - 11',
+		'answer': '79'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '4 * 2 * 2 * 2',
+		'answer': '32'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '3 + 1 + 2 * 10',
+		'answer': '24'
 	},
 	{
-		'math': '33 + 49',
-		'answer': '82'
+		'math': '10 / 2 * 3',
+		'answer': '15'
+	},
+	{
+		'math': '100 - 2 - 3 - 50',
+		'answer': '45'
+	},
+	{
+		'math': '2 * 10 * 4',
+		'answer': '80'
 	}
 ];

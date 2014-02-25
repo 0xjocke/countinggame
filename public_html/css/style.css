@@ -148,15 +148,26 @@ Finnished
   float: left;
   margin-right: 1.69492%;
   display: inline;
-  margin-left: 16.94915%;
-  margin-right: 0%;
 }
-/* line 45, ../../sass/_layout.scss */
+/* line 44, ../../sass/_layout.scss */
 .playagain:active {
   margin-top: 3.2rem;
 }
 
-/* line 49, ../../sass/_layout.scss */
+/* line 48, ../../sass/_layout.scss */
+.toplistbtn {
+  margin-top: 3rem;
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 51, ../../sass/_layout.scss */
+.toplistbtn:active {
+  margin-top: 3.2rem;
+}
+
+/* line 55, ../../sass/_layout.scss */
 .newgame {
   margin-top: 3rem;
   width: 32.20339%;
@@ -164,12 +175,18 @@ Finnished
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
-  margin-left: 0%;
-  margin-right: 16.94915%;
 }
-/* line 53, ../../sass/_layout.scss */
+/* line 58, ../../sass/_layout.scss */
 .newgame:active {
   margin-top: 3.2rem;
+}
+
+/*
+Finnished
+*/
+/* line 65, ../../sass/_layout.scss */
+#toplistBack {
+  margin-left: 8.47458%;
 }
 
 @font-face {
@@ -332,56 +349,114 @@ form {
   background-repeat: no-repeat;
 }
 
-/* line 1, ../../sass/modules/_playmode.scss */
+/* line 2, ../../sass/modules/_playmode.scss */
 .play {
   display: none;
 }
 
-/* line 4, ../../sass/modules/_playmode.scss */
+/* line 5, ../../sass/modules/_playmode.scss */
 .playmode {
   box-sizing: border-box;
   font-size: 1.5rem;
   text-align: center;
 }
-/* line 8, ../../sass/modules/_playmode.scss */
+/* line 9, ../../sass/modules/_playmode.scss */
 .playmode:nth-child(1), .playmode:nth-child(3) {
   padding: 1rem;
   border: 2px solid white;
   border-radius: 10px;
 }
 
-/* line 14, ../../sass/modules/_playmode.scss */
+/* line 15, ../../sass/modules/_playmode.scss */
 .answer {
   color: black;
   font-size: 3.5rem;
   text-shadow: 1px 1px 1px white;
 }
-/* line 18, ../../sass/modules/_playmode.scss */
+/* line 19, ../../sass/modules/_playmode.scss */
 .answer:active {
   margin-top: 4.2rem;
 }
 
-/* line 23, ../../sass/modules/_playmode.scss */
+/* line 25, ../../sass/modules/_playmode.scss */
 .correct-picked {
-  color: green;
+  color: white;
+  background: #00cc00;
+  text-shadow: 2px 2px 2px #1a1a1a;
 }
 
-/* line 26, ../../sass/modules/_playmode.scss */
+/* line 30, ../../sass/modules/_playmode.scss */
 .correct-notpicked {
   background: grey;
   color: green;
 }
 
-/* line 31, ../../sass/modules/_playmode.scss */
+/* line 35, ../../sass/modules/_playmode.scss */
 .wrong-picked {
   background: red;
 }
 
-/* line 35, ../../sass/modules/_playmode.scss */
+/* line 39, ../../sass/modules/_playmode.scss */
 .wrong-notpicked {
   background: grey;
   color: grey;
   text-shadow: none;
+}
+
+/* line 45, ../../sass/modules/_playmode.scss */
+.bonus {
+  display: none;
+  width: 150px;
+  position: absolute;
+  top: 9rem;
+  right: 10rem;
+  animation: cloud 3s;
+  -webkit-animation: cloud 3s;
+  /* Safari and Chrome */
+}
+
+@keyframes cloud {
+  /* line 58, ../../sass/modules/_playmode.scss */
+  25% {
+    width: 250px;
+  }
+
+  /* line 59, ../../sass/modules/_playmode.scss */
+  50% {
+    width: 150px;
+  }
+
+  /* line 60, ../../sass/modules/_playmode.scss */
+  75% {
+    width: 250px;
+  }
+
+  /* line 61, ../../sass/modules/_playmode.scss */
+  100% {
+    width: 150px;
+  }
+}
+
+@-webkit-keyframes cloud {
+  /* line 66, ../../sass/modules/_playmode.scss */
+  25% {
+    width: 250px;
+  }
+
+  /* line 67, ../../sass/modules/_playmode.scss */
+  50% {
+    width: 150px;
+  }
+
+  /* line 68, ../../sass/modules/_playmode.scss */
+  75% {
+    width: 250px;
+  }
+
+  /* line 69, ../../sass/modules/_playmode.scss */
+  100% {
+    width: 150px;
+  }
 }
 
 /* line 1, ../../sass/modules/_toplist.scss */
@@ -390,12 +465,16 @@ form {
 }
 
 /* line 4, ../../sass/modules/_toplist.scss */
-.toplistUl {
-  font-size: 1.5rem;
+.toplistTable {
   margin: 0 auto;
-  text-align: center;
+  font-size: 1.5rem;
 }
-/* line 8, ../../sass/modules/_toplist.scss */
-.toplistUl li {
-  margin: 1rem 0;
+/* line 7, ../../sass/modules/_toplist.scss */
+.toplistTable td {
+  padding: 0.5rem;
+}
+
+/* line 11, ../../sass/modules/_toplist.scss */
+.thisperson {
+  color: orange;
 }
