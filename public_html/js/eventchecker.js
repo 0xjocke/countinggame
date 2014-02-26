@@ -2,6 +2,18 @@
 //save perosn to db
 $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
+	if ($('.contactfield-name').val() === '') {
+		$('.validationN').fadeIn('fast');
+		return;
+	}else{
+		$('.validationN').fadeOut('fast');
+	}
+	if ($('.contactfield-email').val() === '') {
+		$('.validationE').fadeIn('fast');
+		return;
+	}else{
+		$('.validationE').fadeOut('fast');
+	}
 	var values = $(this).serializeArray();
 	var person = new Person(values);
 	game = new Game();

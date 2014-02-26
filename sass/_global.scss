@@ -1,6 +1,6 @@
 body{
-	background: url('../img/bg.jpg');
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: url('../img/bg1.jpg');
+	font-family: "Marker Felt", marker, cursive, sans-serif;
 	color: white;
 	text-shadow: 2px 2px 2px lighten(black, 10%);
 }
@@ -14,14 +14,13 @@ h1{
 	-webkit-transform:rotate(-9deg);
 	@media (min-width:400px) {
 		font-size: 3.5rem;
-		
 	}
 	@media (min-width:600px) {
 		font-size:4rem;
 	}
 }
 .logo{
-	margin: 1rem auto;
+	margin: 5rem auto;
 	display: block;
 }
 
@@ -70,4 +69,9 @@ button, .btn{
 
 .relative{
 	position: relative;
+}
+
+.validationN, .validationE {
+	display:none;
+	margin-bottom: 0.5rem;
 }
