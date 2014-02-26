@@ -18,10 +18,16 @@
 		$persons = Person::get_toplist();
 		$counter= 1;
 		foreach($persons as $person){
-			if ($person->id === $_SESSION['id']) {
+			if (isset($_SESSION['id'])) {
+				if ($person->id === $_SESSION['id']) {
 				$table .= '<tr class="thisperson"><td>'. $counter. '.</td>'. '<td>' . $person->name . '</td>' . 
 							'<td>' . $person->highscore . '</td>';
-							$counter++;			
+							$counter++;	
+				}else{
+				$table .= '<tr><td>'. $counter. '.</td>'. '<td>' . $person->name . '</td>' . 
+				'<td>' . $person->highscore . '</td>';
+				$counter++;
+				}	
 			}else{
 				$table .= '<tr><td>'. $counter. '.</td>'. '<td>' . $person->name . '</td>' . 
 				'<td>' . $person->highscore . '</td>';
