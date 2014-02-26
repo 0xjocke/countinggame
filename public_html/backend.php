@@ -18,7 +18,7 @@
 		$persons = Person::get_toplist();
 		$counter= 1;
 		foreach($persons as $person){
-			if ($person->name === $_SESSION['name']) {
+			if ($person->id === $_SESSION['id']) {
 				$table .= '<tr class="thisperson"><td>'. $counter. '.</td>'. '<td>' . $person->name . '</td>' . 
 							'<td>' . $person->highscore . '</td>';
 							$counter++;			

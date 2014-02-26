@@ -2,6 +2,12 @@
 //save perosn to db
 $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
+	document.getElementById('clockSound').play();
+	document.getElementById('clockSound').pause();
+	document.getElementById('bonusPling').play();
+	document.getElementById('bonusPling').pause();
+
+
 	if ($('.contactfield-name').val() === '') {
 		$('.validationN').fadeIn('fast');
 		return;

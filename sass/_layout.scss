@@ -63,5 +63,7 @@ Finnished
 Finnished
 */
 #toplistBack{
-	@include pre(1,12);
+	position: absolute;
+	bottom: 0;
+	left: 2rem;
 }

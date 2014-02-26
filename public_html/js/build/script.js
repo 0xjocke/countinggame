@@ -119,7 +119,7 @@ Game.prototype.points = function(){
 	$('#points').html(this.pointsCounter);
 };
 Game.prototype.timer = function(){
-	var count = 60;
+	var count = 6;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
 		if (count === 9) {
@@ -194,7 +194,7 @@ Game.prototype.checkAnswer = function(clickedBtn){
 			if (this.pointsInRow%5 === 0) {
 				this.pointsCounter += 10;
 				document.getElementById('bonusPling').play();
-				$('.bonus').fadeIn('fast').delay(3000).fadeOut('fast');
+				$('.bonus').fadeIn('fast').delay(1700).fadeOut('fast');
 			}
 			this.pointsCounter += 10;
 			this.points();
@@ -260,6 +260,12 @@ Game.prototype.finished = function(){
 //save perosn to db
 $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
+	document.getElementById('clockSound').play();
+	document.getElementById('clockSound').pause();
+	document.getElementById('bonusPling').play();
+	document.getElementById('bonusPling').pause();
+
+
 	if ($('.contactfield-name').val() === '') {
 		$('.validationN').fadeIn('fast');
 		return;

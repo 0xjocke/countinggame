@@ -192,7 +192,9 @@ Finnished
 */
 /* line 65, ../../sass/_layout.scss */
 #toplistBack {
-  margin-left: 8.47458%;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
 }
 
 @font-face {
@@ -434,8 +436,8 @@ form {
   position: absolute;
   top: -7rem;
   right: 3rem;
-  animation: cloud 3s;
-  -webkit-animation: cloud 3s;
+  animation: cloud 1.5s;
+  -webkit-animation: cloud 1.5s;
   /* Safari and Chrome */
 }
 
