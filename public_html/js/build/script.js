@@ -119,7 +119,7 @@ Game.prototype.points = function(){
 	$('#points').html(this.pointsCounter);
 };
 Game.prototype.timer = function(){
-	var count = 6;
+	var count = 60;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
 		if (count === 9) {
