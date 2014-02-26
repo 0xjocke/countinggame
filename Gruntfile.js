@@ -29,6 +29,8 @@ module.exports = function(grunt) {
             },
             prod: {
                 options: {
+                    relativeAssets: true,
+                    require: 'susy',
                     sassDir: 'sass',
                     cssDir: 'public_html/css',
                     environment: 'production',
@@ -48,7 +50,7 @@ module.exports = function(grunt) {
         uglify: {
             prod: {
                 files: {
-                    'public_html/js/build/script.min.js': ['public_html/js/script.js']
+                    'public_html/js/build/script.js': ['public_html/js/build/script.js']
                 }
             }
         }
