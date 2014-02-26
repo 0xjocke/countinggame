@@ -1,6 +1,6 @@
 <section class="finished">
 	<div class="container">
-		<p class="megalarge">Du hade <span id="finishedPoints"></span> poäng</p>
+		<p class="megalarge">Du fick <span id="finishedPoints"></span> poäng</p>
 	</div>
 	<div class="container">
 		<button id="playagain" class="playagain">Spela igen</button>
