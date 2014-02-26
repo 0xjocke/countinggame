@@ -339,6 +339,9 @@ $(document).hammer().on('tap', '#toplist', function(event) {
 $(document).hammer().on('swipeleft', '.toplist', function(event) {
 	$('#toplistBack').trigger('tap');
 });
+$(document).hammer().on('swiperight', '.toplist', function(event) {
+	$('#toplistBack').trigger('tap');
+});
 $(document).hammer().on('tap', '#toplistBack', function(event) {
 	$('.toplist').fadeOut('fast', function() {
 		$('.finished').fadeIn('fast');
