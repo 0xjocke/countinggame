@@ -19,7 +19,6 @@ $dbh = new PDO(
 
 // Models
 require_once 'models/Person.php';
-require_once 'models/Authorization.php';
 
 
 
