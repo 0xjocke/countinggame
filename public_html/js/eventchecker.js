@@ -4,10 +4,6 @@ $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
 	document.getElementById('clockSound').play();
 	document.getElementById('clockSound').pause();
-	document.getElementById('bonusPling').play();
-	document.getElementById('bonusPling').pause();
-
-
 	if ($('.contactfield-name').val() === '') {
 		$('.validationN').fadeIn('fast');
 		return;
@@ -72,7 +68,7 @@ $(document).hammer().on('tap', '#toplist', function(event) {
 		url: 'backend.php?toplist=yes'
 	})
 	.done(function(html) {
-		$('#empty').replaceWith(html);
+		$('.toplistTable').replaceWith(html);
 		$('.finished').fadeOut('fast', function() {
 			$('.toplist').fadeIn('fast');
 		});

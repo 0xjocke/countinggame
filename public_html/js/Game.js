@@ -82,7 +82,7 @@ Game.prototype.checkAnswer = function(clickedBtn){
 			if (this.pointsInRow%5 === 0) {
 				this.pointsCounter += 10;
 				document.getElementById('bonusPling').play();
-				$('.bonus').fadeIn('fast').delay(1700).fadeOut('fast');
+				$('.bonus').fadeIn('fast').delay(1200).fadeOut('fast');
 			}
 			this.pointsCounter += 10;
 			this.points();
