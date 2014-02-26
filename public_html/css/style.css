@@ -225,6 +225,7 @@ body {
 h1 {
   font-size: 2.5rem;
   text-align: center;
+  margin-bottom: 5rem;
   margin: 2rem 0 4rem 0;
   text-shadow: 2px 2px 2px #1a1a1a;
   transform: rotate(-9deg);
@@ -243,13 +244,13 @@ h1 {
   }
 }
 
-/* line 22, ../../sass/_global.scss */
+/* line 23, ../../sass/_global.scss */
 .logo {
-  margin: 5rem auto;
+  margin: 5rem auto 0 auto;
   display: block;
 }
 
-/* line 28, ../../sass/_global.scss */
+/* line 29, ../../sass/_global.scss */
 button, .btn {
   font-family: "Marker Felt", marker, cursive, sans-serif;
   text-shadow: 2px 2px 2px #1a1a1a;
@@ -267,50 +268,50 @@ button, .btn {
   border: 2px solid grey;
   background: #57c6d1;
 }
-/* line 45, ../../sass/_global.scss */
+/* line 46, ../../sass/_global.scss */
 button:active, .btn:active {
   margin-top: 0.8rem;
 }
 
-/* line 49, ../../sass/_global.scss */
+/* line 50, ../../sass/_global.scss */
 .large {
   font-size: 4rem;
 }
 @media (min-width: 800px) {
-  /* line 49, ../../sass/_global.scss */
+  /* line 50, ../../sass/_global.scss */
   .large {
     font-size: 5rem;
   }
 }
 
-/* line 55, ../../sass/_global.scss */
+/* line 56, ../../sass/_global.scss */
 .megalarge {
   text-align: center;
   font-size: 6rem;
 }
 @media (min-width: 900px) {
-  /* line 55, ../../sass/_global.scss */
+  /* line 56, ../../sass/_global.scss */
   .megalarge {
     font-size: 7rem;
   }
 }
 
-/* line 62, ../../sass/_global.scss */
+/* line 63, ../../sass/_global.scss */
 .finished {
   display: none;
 }
 
-/* line 66, ../../sass/_global.scss */
+/* line 67, ../../sass/_global.scss */
 .hidden {
   display: none;
 }
 
-/* line 70, ../../sass/_global.scss */
+/* line 71, ../../sass/_global.scss */
 .relative {
   position: relative;
 }
 
-/* line 74, ../../sass/_global.scss */
+/* line 75, ../../sass/_global.scss */
 .validationN, .validationE {
   display: none;
   margin-bottom: 0.5rem;
