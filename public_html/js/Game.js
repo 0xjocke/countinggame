@@ -10,6 +10,9 @@ Game.prototype.timer = function(){
 	var count = 60;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
+		if (count === 9) {
+			document.getElementById('clockSound').play();
+		}
 		if(count == -1){
 			clearInterval(timer);
 			$('#finished').trigger('click');

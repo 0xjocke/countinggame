@@ -20,5 +20,6 @@
 		<button id="answer4" class="answer"></button>
 	</div>
 	<audio id="bonusPling" src="audio/pling.wav"></audio>
+	<audio id="clockSound" src="audio/clock.wav"></audio>
 	<button id="dataloaded" class="hidden"></button>
 </section>
