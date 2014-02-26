@@ -1,8 +1,15 @@
 countinggame
 ============
+--
+-- Steg 1. Uppdatera config-example.php
+--
+
+Ändra i config-exapmle.php så att dina databas uppgifter är insrkivna.
+Byt sedan namn till config.php
+
 
 --
--- Tabellstruktur `persons`
+-- Steg 2. Skapa databasstrukturen
 --
 
 CREATE TABLE IF NOT EXISTS `persons` (
@@ -12,3 +19,4 @@ CREATE TABLE IF NOT EXISTS `persons` (
   `highscore` int(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=60 ;
+
