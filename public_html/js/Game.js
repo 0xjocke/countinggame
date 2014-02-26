@@ -7,7 +7,7 @@ Game.prototype.points = function(){
 	$('#points').html(this.pointsCounter);
 };
 Game.prototype.timer = function(){
-	var count = 6;
+	var count = 60;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
 		if(count == -1){
@@ -78,6 +78,7 @@ Game.prototype.checkAnswer = function(clickedBtn){
 			this.pointsInRow += 1;
 			if (this.pointsInRow%5 === 0) {
 				this.pointsCounter += 10;
+				document.getElementById('bonusPling').play();
 				$('.bonus').fadeIn('fast').delay(3000).fadeOut('fast');
 			}
 			this.pointsCounter += 10;

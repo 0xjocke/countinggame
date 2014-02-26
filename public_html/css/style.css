@@ -293,6 +293,11 @@ button:active, .btn:active {
   display: none;
 }
 
+/* line 71, ../../sass/_global.scss */
+.relative {
+  position: relative;
+}
+
 /* line 2, ../../sass/modules/_contactForm.scss */
 form {
   margin: 0 auto;
@@ -408,8 +413,8 @@ form {
   display: none;
   width: 150px;
   position: absolute;
-  top: 9rem;
-  right: 10rem;
+  top: -7rem;
+  right: 3rem;
   animation: cloud 3s;
   -webkit-animation: cloud 3s;
   /* Safari and Chrome */
