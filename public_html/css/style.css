@@ -344,6 +344,19 @@ button:active, .btn:active {
   display: block !important;
 }
 
+/* line 83, ../../sass/_global.scss */
+.archiveForm {
+  position: absolute;
+  top: 45%;
+  right: 45%;
+  width: 350px;
+}
+/* line 88, ../../sass/_global.scss */
+.archiveForm input {
+  display: block;
+  width: 300px;
+}
+
 /* line 2, ../../sass/modules/_contactForm.scss */
 form {
   margin: 0 auto;
@@ -537,4 +550,31 @@ form {
 /* line 11, ../../sass/modules/_toplist.scss */
 .thisperson {
   color: orange;
+}
+
+/*TV*/
+/* line 18, ../../sass/modules/_toplist.scss */
+.dayHighscore {
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
+  width: 25rem;
+  height: 26rem;
+}
+/* line 24, ../../sass/modules/_toplist.scss */
+.dayHighscore p {
+  position: absolute;
+  left: 5rem;
+  font-size: 2rem;
+}
+/* line 29, ../../sass/modules/_toplist.scss */
+.dayHighscore span {
+  margin-top: 1rem;
+  position: absolute;
+  left: 4rem;
+  display: block;
+  font-size: 2rem;
+  font-size: 4rem;
+  color: orange;
+  text-shadow: 2px 2px 2px #1a1a1a;
 }

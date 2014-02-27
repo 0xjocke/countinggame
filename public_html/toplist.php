@@ -21,6 +21,11 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="dayHighscore">
+		<p>Dagens högsta poäng: <span id="highest">400p</span></p>
+	</div>
+
 	<button class="hidden" id="finished"></button>
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/libs/hammer.js"></script>

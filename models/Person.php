@@ -63,5 +63,29 @@
 
     	$this->id = self::$dbh->lastInsertId();
   	}
+
+  	public static function get_highest() {
+	   		$statement = self::$dbh->prepare("SELECT GREATEST (
+	(SELECT ifNull(MAX(highscore),0)
+    FROM persons),
+	(SELECT ifNull(MAX(highscore), 0)
+	FROM persons_archive)    
+) as 'max'");
+	   		$statement->execute();
+	   		return $statement->fetch();
+  	}
+  	public static function archive() {
+  		$statement = self::$dbh->prepare("INSERT INTO persons_archive
+			(id, name, email, highscore, year)
+			SELECT id, name, email, highscore, year FROM persons");
+	   	$statement->execute();
+	   	$statement = self::$dbh->prepare("DELETE from persons");
+	   	$statement->execute();
+  	}
+
+  	
+
+
+
 }
  ?>

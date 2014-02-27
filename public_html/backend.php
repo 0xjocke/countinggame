@@ -43,6 +43,20 @@
 		$json = json_encode($persons);
 		echo $json; 
 	}
+	if (isset($_GET['tvmax'])) {
+		$max = Person::get_highest();
+		$json = json_encode($max);
+		echo $json; 
+	}
+	if (isset($_GET['secret'])) {
+		if($_GET['secret'] === 'hejabamse'){
+			$archive = Person::archive();
+   	 		header('Location: archive.php');
+		}
+	
+
+	}
+
 
 
 
