@@ -15,7 +15,7 @@
 	}
 	if (isset($_GET['toplist'])) {
 		$table ='<table class="toplistTable">';
-		$persons = Person::get_toplist();
+		$persons = Person::get_toplist(10);
 		$counter= 1;
 		foreach($persons as $person){
 			if (isset($_SESSION['id'])) {
@@ -37,6 +37,13 @@
 		$table .='</table>';
 		echo $table;
 	}
+
+	if (isset($_GET['tvtoplist'])) {
+		$persons = Person::get_toplist(20);
+		$json = json_encode($persons);
+		echo $json; 
+	}
+
 
 
  ?>

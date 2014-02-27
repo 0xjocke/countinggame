@@ -11,7 +11,14 @@
 	</header>
 	<section class="toplist show">
 		<div class="container">
-			<div class="toplistTable"> Ingen toplista</div>
+			<div class="toplistTableL">
+				<table class="toplistTable">
+				</table>
+			</div>
+			<div class="toplistTableR">
+				<table class="toplistTable">
+				</table>
+			</div>
 		</div>
 	</section>
 	<button class="hidden" id="finished"></button>

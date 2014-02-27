@@ -60,10 +60,22 @@ Finnished
 	}
 }
 /*
-Finnished
+Toplist
 */
 #toplistBack{
 	position: absolute;
 	bottom: 0;
 	left: 2rem;
 }
+
+/*
+Toplist tv
+*/
+
+.toplistTableL{
+	@include span-columns(6 , 12);
+}
+.toplistTableR{
+	@include span-columns(6 omega, 12); 
+}
+

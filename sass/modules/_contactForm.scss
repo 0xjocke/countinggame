@@ -32,7 +32,10 @@ form{
 	@include icon(url('../img/name.svg'));
 }
 
-
 .contactfield-email, .contactfield-email:focus{
 	@include icon(url('../img/email.svg'));
+}
+.contactfield-year, .contactfield-year:focus{
+	@include icon(url('../img/password.png'));
+	background-size: 1.6rem 1.6rem;
 }

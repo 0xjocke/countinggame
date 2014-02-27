@@ -188,13 +188,33 @@ Finnished
 }
 
 /*
-Finnished
+Toplist
 */
 /* line 65, ../../sass/_layout.scss */
 #toplistBack {
   position: absolute;
   bottom: 0;
   left: 2rem;
+}
+
+/*
+Toplist tv
+*/
+/* line 75, ../../sass/_layout.scss */
+.toplistTableL {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 78, ../../sass/_layout.scss */
+.toplistTableR {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
 }
 
 @font-face {
@@ -314,7 +334,7 @@ button:active, .btn:active {
 }
 
 /* line 75, ../../sass/_global.scss */
-.validationN, .validationE {
+.validationN, .validationE, .validationY {
   display: none;
   margin-bottom: 0.5rem;
 }
@@ -372,12 +392,21 @@ form {
   background-repeat: no-repeat;
 }
 
-/* line 36, ../../sass/modules/_contactForm.scss */
+/* line 35, ../../sass/modules/_contactForm.scss */
 .contactfield-email, .contactfield-email:focus {
   background-image: url("../img/email.svg");
   background-size: 1.875rem 1.875rem;
   background-position: 0.68rem 0.5rem;
   background-repeat: no-repeat;
+}
+
+/* line 38, ../../sass/modules/_contactForm.scss */
+.contactfield-year, .contactfield-year:focus {
+  background-image: url("../img/password.png");
+  background-size: 1.875rem 1.875rem;
+  background-position: 0.68rem 0.5rem;
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
 }
 
 /* line 2, ../../sass/modules/_playmode.scss */

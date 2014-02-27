@@ -34,9 +34,14 @@
 	    // returnes one row with objects
 	    return $statement->fetch(PDO::FETCH_CLASS);
   	}
-  	public static function get_toplist() {
+  	public static function get_toplist($nr) {
 	    $class = get_called_class();
-	    $statement = self::$dbh->prepare("SELECT * FROM persons ORDER BY highscore DESC LIMIT 10");
+	    $statement;
+	    if ($nr ===20) {
+	   		$statement = self::$dbh->prepare("SELECT * FROM persons ORDER BY highscore DESC LIMIT 20");
+	    }else{
+	   		$statement = self::$dbh->prepare("SELECT * FROM persons ORDER BY highscore DESC LIMIT 10");
+	    }
 	    $statement->execute();
 	    // returnes 10 row with objects
     	return $statement->fetchAll(PDO::FETCH_CLASS, $class);
@@ -52,9 +57,9 @@
 
   	public function save_to_db(){
   		 $statement = self::$dbh->prepare(
-	      "INSERT INTO ".self::TABLE_NAME." (name, email, highscore) VALUES (:name, :email, :highscore)");
+	      "INSERT INTO ".self::TABLE_NAME." (name, email, highscore, year) VALUES (:name, :email, :highscore, :year)");
 
-    	$statement->execute(array('name' => $this->name, 'email' => $this->email, 'highscore' => 0));
+    	$statement->execute(array('name' => $this->name, 'email' => $this->email, 'highscore' => 0, 'year' => $this->year));
 
     	$this->id = self::$dbh->lastInsertId();
   	}

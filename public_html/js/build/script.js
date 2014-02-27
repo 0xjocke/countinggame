@@ -206,13 +206,15 @@ var math = [
 function Person(values){
 	this.name = values[0].value;
 	this.email = values[1].value;
+	this.year = values[2].value;
+
 }
 
 Person.prototype.signup = function(){
 	$.ajax({
 		url: 'backend.php',
 		type: 'POST',
-		data: {'name':this.name, 'email': this.email }
+		data: {'name':this.name, 'email': this.email, 'year': this.year }
 	})
 	.done(function() {
 		$('.login').fadeOut('fast', function() {
@@ -228,6 +230,28 @@ Person.prototype.signup = function(){
 	});
 };
 
+Person.prototype.validation = function(){
+	if ($('.contactfield-name').val() === '') {
+		$('.validationN').fadeIn('fast');
+		return false;
+	}else{
+		$('.validationN').fadeOut('fast');
+	}
+	if ($('.contactfield-email').val() === '') {
+		$('.validationE').fadeIn('fast');
+		return false;
+	}else{
+		$('.validationE').fadeOut('fast');
+	}
+	if ($('.contactfield-year').val() === '' || isNaN($('.contactfield-year').val())) {
+		$('.validationY').fadeIn('fast');
+		return false;
+	}else{
+		$('.validationY').fadeOut('fast');
+		return true;
+	}
+};
+
 
 
 function Game(){
@@ -239,7 +263,7 @@ Game.prototype.points = function(){
 	$('#points').html(this.pointsCounter);
 };
 Game.prototype.timer = function(){
-	var count = 60;
+	var count = 1;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
 		if (count === 9) {
@@ -382,18 +406,7 @@ $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
 	document.getElementById('clockSound').play();
 	document.getElementById('clockSound').pause();
-	if ($('.contactfield-name').val() === '') {
-		$('.validationN').fadeIn('fast');
-		return;
-	}else{
-		$('.validationN').fadeOut('fast');
-	}
-	if ($('.contactfield-email').val() === '') {
-		$('.validationE').fadeIn('fast');
-		return;
-	}else{
-		$('.validationE').fadeOut('fast');
-	}
+	if(!Person.prototype.validation()) return;
 	var values = $(this).serializeArray();
 	var person = new Person(values);
 	game = new Game();

@@ -4,18 +4,7 @@ $(document).on('submit', '#signup', function(event) {
 	event.preventDefault();
 	document.getElementById('clockSound').play();
 	document.getElementById('clockSound').pause();
-	if ($('.contactfield-name').val() === '') {
-		$('.validationN').fadeIn('fast');
-		return;
-	}else{
-		$('.validationN').fadeOut('fast');
-	}
-	if ($('.contactfield-email').val() === '') {
-		$('.validationE').fadeIn('fast');
-		return;
-	}else{
-		$('.validationE').fadeOut('fast');
-	}
+	if(!Person.prototype.validation()) return;
 	var values = $(this).serializeArray();
 	var person = new Person(values);
 	game = new Game();
