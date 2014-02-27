@@ -7,7 +7,7 @@ Game.prototype.points = function(){
 	$('#points').html(this.pointsCounter);
 };
 Game.prototype.timer = function(){
-	var count = 1;
+	var count = 60;
 	var timer = setInterval(function() {
 		$('#counter').html(count--);
 		if (count === 9) {
@@ -21,7 +21,7 @@ Game.prototype.timer = function(){
 	
 };
 Game.prototype.addNumber = function(){
-	var randomQ = Math.floor((Math.random()*20)+1);
+	var randomQ = Math.floor((Math.random()*math.length)+1);
 	var question = $('#mathQuestion').html(math[randomQ].math);
 	Game.prototype.fixFontSize(question);
 	var randomA = Math.floor((Math.random()*4)+1);
