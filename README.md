@@ -1,4 +1,4 @@
-countinggame
+countinggame - A marketing game for Fortnox
 ============
 --
 -- Steg 1. Uppdatera config-example.php
